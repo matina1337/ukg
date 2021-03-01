@@ -3,25 +3,30 @@ import './App.css';
 import React from "react";
 import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
+import Home from "./views/Home";
+import { Route, BrowserRouter, Switch, Redirect  } from 'react-router-dom';
+import PrivateRoute from './private-route';
 
 
 function App() {
   return (
-    <>
-      <LoginButton />
-      <LogoutButton />
-    </>
+    <div id = "main">
+      <div id = "Head" >
+        <p id = "title"> Welcome to Dance Maker! Log in to start! >>></p>
+        <div>
+          <LoginButton className = "LoginButton"/>
+          <LogoutButton className = "LoginButton"/>
+        </div>
+        </div>
+      <BrowserRouter>
+        <Switch>
+          <PrivateRoute exact path="/Home" component= {Home}/>
+        </Switch>
+      </BrowserRouter>
+
+    </div>
     
   );
 }
 
 export default App;
-/// <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Welcome to (idk what to name it ^_^)!
-    //     </p>
-    //   </header>
-    // </div>
-    
