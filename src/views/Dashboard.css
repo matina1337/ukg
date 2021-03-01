@@ -1,14 +1,18 @@
 
-#Home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+#Dash {
   min-height: 100vh;
   background-color: #00ABE7;
   height: 100vh;
   width: 100vw;
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+}
+#MovesList {
+  min-height: 100vh;
+  background-color: #5073D9;
+  height: 100vh;
+  width: 20vw;
   margin: 0px;
   padding: 0px;
   min-height: 100vh;
@@ -19,8 +23,8 @@
   to {opacity: 1;}
 }
 
-#MessageHome{
-  margin: 100px;
+#MessageDash{
+  margin: 30px;
   padding: 30px;
   font-size: 20pt;
   font-family: Gill Sans, sans-serif;

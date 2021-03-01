@@ -4,6 +4,7 @@ import React from "react";
 import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
 import Home from "./views/Home";
+import Dashboard from "./views/Dashboard";
 import { Route, BrowserRouter, Switch, Redirect  } from 'react-router-dom';
 import PrivateRoute from './private-route';
 
@@ -21,6 +22,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <PrivateRoute exact path="/Home" component= {Home}/>
+          <PrivateRoute exact path="/Dashboard" component= {Dashboard}/>
         </Switch>
       </BrowserRouter>
 
