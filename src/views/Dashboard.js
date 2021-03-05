@@ -10,14 +10,38 @@ const start = () => {
 }
     return (
     	<div id = "Dash">
-    		<div id = "MovesList"> </div>
+    		<div id = "Moves"> 
+	    		<div id = "MovesList">
+	    			<div id = "Move"> New Move </div>
+	    			<div id = "Move"> New Move </div>
+	    			<div id = "Move"> New Move </div>
+	    			<div id = "Move"> New Move </div>
+	    			<div id = "Move"> New Move </div>
+	    			<div id = "Move"> New Move </div>
+	    			<div id = "Move"> New Move </div>
+	    			<div id = "Move"> New Move </div>
+	    			<div id = "Move"> New Move </div>
+	    			<div id = "Move"> New Move </div>
+	    			<div id = "Move"> New Move </div>
+	    			<div id = "Move"> New Move </div>
+	    			<div id = "Move"> New Move </div>
+	    			<div id = "Move"> New Move </div>
+	    		</div>
+
+    			<button id = "AddMove"> + Add Move </button>
+
+
+    		</div>
     		<div id = "Panel">
     			<div id = "Grid"> </div>
     			<div id = "Judges"> Judging Panel </div>
-    			<audio src= {Nutcracker} controls = {true} id = "Music">
-                    <source  type="audio/mp3"/>
-                    Your browser does not support the audio tag.
-                </audio>
+    			<div id = "MusicPanel">
+    				<button id = "UploadMusic"> Upload Music </button>
+	    			<audio src= {Nutcracker} controls = {true} id = "MusicPlayer">
+	                    <source  type="audio/mp3"/>
+	                    Your browser does not support the audio tag.
+	                </audio>
+                </div>
     		</div>
     	</div>
     );

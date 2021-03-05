@@ -1,19 +1,56 @@
 
 #Dash {
   min-height: 100%;
+  height: 100vh;
   background-color: #00ABE7;
   width: 100%;
   display: flex;
   flex-direction: row;
+  overflow: hidden; 
   
 }
-#MovesList {
-  min-height: 100%;
-  min-height: 100vh;
-  background-color: #5073D9;
+#Moves {
+  height: 100vh;
+  background-color: #12348D;
   width: 20vw;
   float: left;
   display: block;
+
+}
+#MovesList {
+  height: 91.2vh;
+  background-color: #12348D;
+  width: 100%;
+  float: left;
+  display: block;
+  overflow-y: scroll;
+}
+
+#Move{
+  width: 100%;
+  display: block;
+  font-family: Gill Sans, sans-serif;
+  font-size: 20px;
+  color: white;
+  background-color: #5073D9;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  text-align: left;
+  border: 10px solid #12348D;
+  border-top: 0;
+  border-radius: 20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#AddMove{
+  transform: translateY(-35%);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 20px;
+  width: 10vw;
 }
 
 #Panel{
@@ -47,9 +84,21 @@
 
 }
 
-#Music {
-  width: 100%;
+#MusicPanel{
+  display: flex;
+  flex-direction: row;
   background-color: #5E2390;
+  padding-right: 10px;
+}
+
+#UploadMusic{
+  transform: translateY(-35%);
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#MusicPlayer {
+  width: 100%;
   display: flex;
   font-family: Gill Sans, sans-serif;
   font-size: 30px;
@@ -60,41 +109,5 @@
   text-align: center;
   vertical-align: middle;
   justify-content: center;
-
-}
-
-@keyframes intro {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-#MessageDash{
-  margin: 30px;
-  padding: 30px;
-  font-size: 20pt;
-  font-family: Gill Sans, sans-serif;
-  color: white;
-  background-color: #040F57;
-  animation-name: intro;
-  animation-duration: 4s;
-  border-radius: 20px;
-}
-
-
-.Create{
-  margin: 30px;
-  padding: 20px;
-  width: 200px;
-  cursor: pointer;
-  font-family: Gill Sans, sans-serif;
-  font-size: 15pt;
-  font-weight: 600;
-  color: white;
-  border-radius: 15px;
-  border: 0px;
-  border-color: #0b1354;
-  background-color: #9043C3;
-  animation-name: intro;
-  animation-duration: 4s;
 
 }
