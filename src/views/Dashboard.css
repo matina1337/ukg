@@ -37,6 +37,14 @@
   padding-top: 20px;
   padding-left: 20px;
   text-align: left;
+  margin-top: 17px;
+}
+
+#MoveCont {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden; 
+  background-color: #5073D9;
   border: 10px solid #12348D;
   border-top: 0;
   border-radius: 20px;
@@ -53,8 +61,76 @@
   width: 10vw;
 }
 
+.mymodal{
+  width: 300px;
+  height: 86.2%;
+  position: absolute;
+  left: 19.2%;
+  top: 16.5%; 
+  background: #5073D9;
+  border: 0;
+  border-radius: 20px;
+  transition: 1s ease-out;
+  padding: 20px;
+}
+
+#Modal_title{
+  font-family: Gill Sans, sans-serif;
+  font-size: 30px;
+  color: white;
+  float: left;
+  margin-right: 150px;
+}
+
+#Modal_head{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#Close_modal{
+  width: 40px;
+  float: right;
+  margin: 0px;
+}
+
+.Select{
+  font-size: 20px;
+  font-family: Gill Sans, sans-serif;
+  color: #12348D;
+  width: 95%;
+  background-color: #99b3ff;
+  border: 0px;
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.Time{
+  font-size: 20px;
+  font-family: Gill Sans, sans-serif;
+  color: #12348D;
+  width: 40%;
+  background-color: #99b3ff;
+  border: 0px;
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#jump{
+  display: flex;
+  flex-direction: row;
+}
+
 #Panel{
   width: 100%;
+
 }
 
 #Grid {
