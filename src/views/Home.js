@@ -8,6 +8,7 @@ function Home() {
     	<p id = "MessageHome"> Get started! Create a new program or load a saved project </p>
     	<div>
 	    	<Link className = "Create" to = "/Dashboard"> + Create New Program </Link>
+            <Link className = "Create" to = "/Profile"> My Profile </Link>
 	    	<Link className = "Create"> Find Saved Program </Link>
     	</div>
     	
