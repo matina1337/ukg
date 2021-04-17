@@ -1,26 +1,63 @@
 import './EditProfile.css';
-import React from "react";
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link,  useParams, useHistory } from 'react-router-dom';
 import profileimg from '../assets/profile.jpg';
+import { useAuth0 } from '@auth0/auth0-react';
+import axios from 'axios';
 
 function EditProfile() {
+      axios.defaults.baseURL = "http://localhost:3001";
+
+            const history = useHistory();
+            const { user } = useAuth0();
+            const { email } = useParams();
+
+            const [successMsg, setSuccessMsg] = useState(false);
+            const [userInfo, setUserInfo] = useState([]);
+
+      useEffect(() => {
+            axios.get('/users/' + user.name)
+      .then(res =>{
+            if(res.data != null) {setUserInfo(res.data)}})
+      .catch(err => console.log(err));
+      }, [user.name]);
+
+      const onSubmit = (e) => {
+            e.preventDefault()
+
+            axios.put('/edit/' + user.name, userInfo)
+            .then((res) => {
+                setSuccessMsg(true)
+                console.log(res.data)
+            }).catch((error) => {
+                console.log(error)
+            });
+
+    }
     return (
+
+
     	<div id = "EditProfile">
             <img src = {profileimg} id = "profileimg" />
-            <form id = "info">
+            <form id = "info" onSubmit = {onSubmit}>
+
                 <div class = "fields">
                 <label for="username">Username:</label>
-                <input type="text" class = "input" name="username" />
+                <input type="text" class = "input" name="username" 
+                value={userInfo.username} onChange={e => setUserInfo({...userInfo, username: e.target.value})}/>
                 </div>
 
                 <div class = "fields">
                 <label for="email">Email:</label>
-                <input type="text" class = "input" name="email" />
+                <input type="text" class = "input" name="email"
+                value={userInfo.email} onChange={e => setUserInfo({...userInfo, email: e.target.value})}/>
                 </div>
 
                 <div class = "fields">
                 <label for="country">Country:</label>
-                <select id="country" name="country">
+                <select id="country" name="country"
+                value={userInfo.country} onChange={e => setUserInfo({...userInfo, country: e.target.value})}>
+                  <option value="">Country</option>
                    <option value="Afganistan">Afghanistan</option>
                    <option value="Albania">Albania</option>
                    <option value="Algeria">Algeria</option>
@@ -273,16 +310,25 @@ function EditProfile() {
 
                 <div class = "fields">
                 <label for="insta">Instagram:</label>
-                <input type="text" class = "input" name="insta" />
+                <input type="text" class = "input" name="insta" 
+                value={userInfo.insta} onChange={e => setUserInfo({...userInfo, insta: e.target.value})}/>
                 </div>
+
 
                 <div class = "fields">
                 <label for="contact">Contact:</label>
-                <input type="text" class = "input" name="contact" />
+                <input type="text" class = "input" name="contact" 
+                value={userInfo.contact} onChange={e => setUserInfo({...userInfo, contact: e.target.value})}/>
                 </div>
+
+
+                <div className="form-group">
+                    <input type="submit" value="Update Profile" className="EditProfileButton"/>
+                    <Link id = "CancelButton" to={'/Profile'}>Cancel</Link>
+                </div>
+
             </form>
     
-    	   <button id = "EditProfileButton"> Save </button>
     	</div>
     );
 }
