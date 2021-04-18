@@ -33,3 +33,24 @@
   height:150px;
   border-radius: 50%;
 }
+
+.Btn{
+  margin: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 10px;
+  width: 100px;
+  cursor: pointer;
+  font-family: Gill Sans, sans-serif;
+  font-size: 15pt;
+  font-weight: 600;
+  color: white;
+  border-radius: 15px;
+  border: 0px;
+  border-color: #0b1354;
+  background-color: #9043C3;
+}
+
+.spacer{
+  margin-top: 60px;
+}

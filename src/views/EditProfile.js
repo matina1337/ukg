@@ -48,12 +48,6 @@ function EditProfile() {
                 </div>
 
                 <div class = "fields">
-                <label for="email">Email:</label>
-                <input type="text" class = "input" name="email"
-                value={userInfo.email} onChange={e => setUserInfo({...userInfo, email: e.target.value})}/>
-                </div>
-
-                <div class = "fields">
                 <label for="country">Country:</label>
                 <select id="country" name="country"
                 value={userInfo.country} onChange={e => setUserInfo({...userInfo, country: e.target.value})}>

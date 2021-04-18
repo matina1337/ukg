@@ -40,7 +40,12 @@ function Profile() {
                 <p> Country: {userInfo.country} </p>
                 <p> Instagram: {userInfo.insta} </p>
                 <p> Contact #: {userInfo.contact} </p>
-                <Link to = "/EditProfile"> Edit Profile </Link>
+                <div className = "spacer">
+                <Link className = "Btn" to = "/EditProfile"> Edit Profile </Link>
+                </div>
+                <div  className = "spacer">
+                <Link className = "Btn" to = "/Home"> Back to Home </Link>
+                </div>
             </div>
     
     	
